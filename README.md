@@ -21,6 +21,7 @@
 
 ---
 Jeśli nie masz zainstalowanego środowiska Python otwórz plik *"Start exe.exe"*. Został skompilowany za pomocą biblioteki *"pyinstaller"* i spakowany do archiwum *"Start exe rar.part1.rar"* i *"Start exe rar.part2.rar"*.
+Wszystkie pliki możesz pobrać [tutaj.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
 
 Dostępna jest mapa projektu na stronie [Trello.](https://trello.com/b/NnwU2e8S/friday-osobisty-asystent "Friday roadmap")
 
