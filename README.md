@@ -20,7 +20,7 @@
 * webbrowser
 
 ---
-Plik *"Start exe.exe"* został skompilowany za pomocą biblioteki *"pyinstaller"*.
+Plik *"Start exe.exe"* został skompilowany za pomocą biblioteki *"pyinstaller"* i spakowany do archiwum *"Start exe rar.part1.rar"* i *"Start exe rar.part2.rar"*.
 
 Dostępna jest mapa projektu na stronie [Trello.](https://trello.com/b/NnwU2e8S/friday-osobisty-asystent "Friday roadmap")
 
