@@ -180,7 +180,7 @@ class assistant:
 
 
 # Dzwięk włączania, tyle że nie mój a z plików windowsa :P
-do.playSound("res/Sounds/Shutdown.wav")
+do.playSound("res/Sounds/Startup.wav")
 
 
 assistant.listenToIgnite()
@@ -191,3 +191,4 @@ try:
     assistant.searchForCommand()
 except:
     do.playSound("res/Sounds/stop_recognition.wav")
+do.playSound("res/Sounds/Shutdown.wav")
