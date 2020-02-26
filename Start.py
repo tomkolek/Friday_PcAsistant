@@ -191,4 +191,5 @@ try:
     assistant.searchForCommand()
 except:
     do.playSound("res/Sounds/stop_recognition.wav")
+
 do.playSound("res/Sounds/Shutdown.wav")
