@@ -3,7 +3,7 @@
 
 -----
 
-**Friday** to osobisty asystent, który jest we wczesnej fazie rozwoju. Aby go wywołać Powiedz *"Hej Friday"*, po usłyszeniu dzwięku można wypowiedzieć polecenie. Polecenia nie muszą być wypowiadane kropka w kropkę. Można zamieniać słowa albo powiedzieć różne odmiany słów. Jeżeli polecenie nie będzie istnieć lub zostanie źle zrozumiane asystent odpowie, że *"nie może odpowiedzieć na to pytanie"*
+**Friday** to osobisty asystent, który jest we wczesnej fazie rozwoju. Aby go wywołać Powiedz *"Hej Friday"*, po usłyszeniu dźwięku można wypowiedzieć polecenie. Polecenia nie muszą być wypowiadane kropka w kropkę. Można zamieniać słowa albo powiedzieć różne odmiany słów. Jeżeli polecenie nie będzie istnieć lub zostanie źle zrozumiane asystent odpowie, że *"nie może odpowiedzieć na to pytanie"*
 ###### *(Jeżeli polecenie zostało powiedziane poprawnie, a asystent nie zrozumiał wypowiedzi zgłoś proszę ten błąd)*
 
 ## Funkcje:
