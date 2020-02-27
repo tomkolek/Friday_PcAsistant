@@ -1,13 +1,30 @@
 import speech_recognition as sr
+print("zaimportowano speech_recognition")
 from gtts import gTTS
+print("zaimportowano gTTS")
 import webbrowser as wb
+print("zaimportowano webbrowser")
 from datetime import datetime
+print("zaimportowano datetime")
 import simpleaudio as sa
+print("zaimportowano simpleaudio")
 import os
+print("zaimportowano os")
 import ctypes
-import time
-from res import config
+print("zaimportowano ctypes")
+#import time
+#print("zaimportowano time")
+
 r = sr.Recognizer()
+
+file = open("res\config.cfg", "r", encoding="utf-8")
+config = file.read()
+
+config = config.split("\n")
+for a in range(len(config)):
+    config[a] = config[a].split("&")
+    config[a][2] = config[a][2].split("*")
+
 
 class info:
     assistantName = ['HEJ FRIDAY', 'HEY FRIDAY', 'HIFI DAY', 'HEJ FAJNEJ', 'FIVE A DAY', 'HAY DAY', 'PLAY FRIDAY', 'HIGH FAMILY', 'TEJ FAJNEJ', 'NAJFAJNIEJ', 'HEJ HEJ', 'I FAJNEJ']
@@ -75,21 +92,21 @@ class do:
         text = NAME.split(" ")
         del text[0]
         text = " ".join(text)
-        for a in range(0, len(config.softList)):
+        for a in range(0, len(config)):
             #print(f"a = {a}")
-            for b in range(0, len(config.softList[a][2])):
+            for b in range(0, len(config[a][2])):
                 #print(f"b = {b}")
-                if config.softList[a][2][b] in text:
+                if config[a][2][b] in text:
                     
-                    if config.softList[a][0] == 'WEB':
+                    if config[a][0] == 'WEB':
                         
-                        wb.open(config.softList[a][3])
-                        do.say(str('Otwieram ' + config.softList[a][1]))
+                        wb.open(config[a][3])
+                        do.say(str('Otwieram ' + config[a][1]))
                         
-                    elif config.softList[a][0] == 'SOFT':
+                    elif config[a][0] == 'SOFT':
                         
-                        os.startfile(config.softList[a][3])
-                        do.say(str('Otwieram ' + config.softList[a][1]))
+                        os.startfile(config[a][3])
+                        do.say(str('Otwieram ' + config[a][1]))
                     else:
                         print("ZLE ZDEFINIOWANY RODZAJ OPROGRAMOWANIA W PLIKI config.py")
                 #else:
