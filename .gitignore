@@ -3,11 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-res/Sounds/ffmpeg.exe
-Start.exe
-
 # C extensions
 *.so
+
+Build.py
+res/display decoded config.py
+res/Sounds/ffmpeg.rar
 
 # Distribution / packaging
 .Python

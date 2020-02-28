@@ -3,3 +3,8 @@ softList = [
             ['WEB', 'YouTube', ['youtube', 'youtuba'], 'https://www.youtube.com/'],
             ['WEB', 'Google', ['google', 'gogle'], 'https://www.google.com/']
            ]
+
+class config:
+    x = "coś"
+
+print(config.x)

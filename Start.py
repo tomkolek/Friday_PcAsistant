@@ -1,30 +1,27 @@
 import speech_recognition as sr
-print("zaimportowano speech_recognition")
 from gtts import gTTS
-print("zaimportowano gTTS")
 import webbrowser as wb
-print("zaimportowano webbrowser")
 from datetime import datetime
-print("zaimportowano datetime")
 import simpleaudio as sa
-print("zaimportowano simpleaudio")
 import os
-print("zaimportowano os")
 import ctypes
-print("zaimportowano ctypes")
 #import time
-#print("zaimportowano time")
 
 r = sr.Recognizer()
 
-file = open("res\config.cfg", "r", encoding="utf-8")
-config = file.read()
 
-config = config.split("\n")
-for a in range(len(config)):
-    config[a] = config[a].split("&")
-    config[a][2] = config[a][2].split("*")
+class config:
+    file = open("res\config.cfg", "r", encoding="utf-8")
+    text = file.read()
+    
+    text = text.split("\n#\n")
 
+    softList = text[0].split("\n")
+    for a in range(len(softList)):
+        softList[a] = softList[a].split("&")
+        softList[a][2] = softList[a][2].split("*")
+
+    del text
 
 class info:
     assistantName = ['HEJ FRIDAY', 'HEY FRIDAY', 'HIFI DAY', 'HEJ FAJNEJ', 'FIVE A DAY', 'HAY DAY', 'PLAY FRIDAY', 'HIGH FAMILY', 'TEJ FAJNEJ', 'NAJFAJNIEJ', 'HEJ HEJ', 'I FAJNEJ']
@@ -196,7 +193,6 @@ class assistant:
 
 
 
-# Dzwięk włączania, tyle że nie mój a z plików windowsa :P
 do.playSound("res/Sounds/Startup.wav")
 
 
