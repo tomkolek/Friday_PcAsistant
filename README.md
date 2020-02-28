@@ -20,8 +20,10 @@
 * webbrowser
 
 ---
-Jeśli nie masz zainstalowanego środowiska Python otwórz plik *"Start exe.exe"*. Został skompilowany za pomocą biblioteki *"pyinstaller"* i spakowany do archiwum *"Start exe rar.part1.rar"* i *"Start exe rar.part2.rar"*. Wypakuj go do tego samego folderu. Aby asystent działał poprawnie przejdź do folderu `res/Sounds` i rozpakuj ffmpeg do tego samego folderu w którym się znajduje.
-Wszystkie pliki możesz pobrać [tutaj.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
+### Instalacja:
+* Jeśli nie masz zainstalowanego środowiska Python otwórz plik *"Start exe.exe"*. Został skompilowany za pomocą biblioteki "pyinstaller"* i spakowany do archiwum *"Start exe rar.part1.rar"* i *"Start exe rar.part2.rar"*. Wypakuj go do tego samego folderu. Aby asystent działał poprawnie przejdź do folderu `res/Sounds` i rozpakuj ffmpeg do tego samego folderu w którym się znajduje. 
+* Jeśli masz zainstalowane środowisko Python zaoinstaluj biblioteki zymienione powyżej i uruchom plik `Start.py`
+Wszystkie pliki możesz pobrać [stąd.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
 
 Dostępna jest mapa projektu na stronie [Trello.](https://trello.com/b/NnwU2e8S/friday-osobisty-asystent "Friday roadmap")
 
