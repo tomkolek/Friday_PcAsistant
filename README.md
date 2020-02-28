@@ -12,19 +12,22 @@
 * *(Więcej funkcji w trakcie robienia)*
 
 ## Wykorzystane biblioteki:
-* ctypes
+* ctypes *(domyślnie)*
 * gTTS
-* os
+* os *(domyślnie)*
 * simpleaudio
 * speech_recognition
-* webbrowser
+* webbrowser *(domyślnie)*
 
 ---
 ### Instalacja:
-* Jeśli nie masz zainstalowanego środowiska Python otwórz plik *"Start exe.exe"*. Został skompilowany za pomocą biblioteki "pyinstaller"* i spakowany do archiwum *"Start exe rar.part1.rar"* i *"Start exe rar.part2.rar"*. Wypakuj go do tego samego folderu. Aby asystent działał poprawnie przejdź do folderu `res/Sounds` i rozpakuj ffmpeg do tego samego folderu w którym się znajduje. 
-* Jeśli masz zainstalowane środowisko Python zaoinstaluj biblioteki zymienione powyżej i uruchom plik `Start.py`
+* Jeśli nie masz zainstalowanego środowiska Python wypakuj wszystkie pliki do dowolnego folderu i otwórz plik *"Start.exe"*.
+* Jeśli masz zainstalowane środowisko Python zainstaluj biblioteki zymienione powyżej i uruchom plik `Start.py`
 
 Wszystkie pliki możesz pobrać [stąd.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
+
+## UWAGA!
+Do funkcjonowanie potrzebne jest połączenie z internetem. Jeżeli asystent nie reaguje po wywołaniu go czy wydaniu polecenia, lub reaguje z dużym opóźnieniem, sprawdź połączenie z internetem.
 
 ---
 
