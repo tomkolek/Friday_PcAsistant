@@ -26,6 +26,8 @@
 
 Wszystkie pliki możesz pobrać [stąd.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
 
+---
+
 Dostępna jest mapa projektu na stronie [Trello.](https://trello.com/b/NnwU2e8S/friday-osobisty-asystent "Friday roadmap")
 
 Projekt nie jest przystosowany dla systemów MacOS ani Linux. Wykożystane są tu biblioteki niezgodne z tymi systemami. Możliwe, że w trakcie rozwijania projektu zostaną utworzone wersje zgodne z innymi systemami operacyjnymi.
