@@ -21,7 +21,7 @@
 
 ---
 ### Instalacja:
-* Jeśli nie masz zainstalowanego środowiska Python wypakuj wszystkie pliki do dowolnego folderu i otwórz plik *"Start.exe"*.
+* Jeśli nie masz zainstalowanego środowiska Python lub chcesz skożystać ze skompilowanej wersji, wypakuj wszystkie pliki do dowolnego folderu i otwórz plik *"Start.exe"*.
 * Jeśli masz zainstalowane środowisko Python zainstaluj biblioteki zymienione powyżej i uruchom plik `Start.py`
 
 Wszystkie pliki możesz pobrać [stąd.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
