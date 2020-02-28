@@ -1,5 +1,5 @@
 # Friday - Osobysty asystent
-###### *tylko dla Windows (testowane na Windows 10, może działać na innych)*
+###### *tylko dla Windows (testowane na Windows 10 i 7, może działać na innych)*
 
 -----
 
