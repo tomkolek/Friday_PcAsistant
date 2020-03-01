@@ -1,0 +1,28 @@
+WEB&YouTube&jutube*youtube*youtuba&https://www.youtube.com/
+
+WEB   &   YouTube   &   jutube * youtube * youtuba   &   https://www.youtube.com/
+
+1   &   2   &   3a * 3b * 3c   &   4
+
+(1, 2, (3a, 3b, 3c), 4)
+
+
+
+Każda część jest rozdzielana za pomocą "&",
+a mniejsze części w tych częściach za pomocą "*"
+
+
+1. rodzaj oprogramowania:
+  - "WEB" - strona internetowa
+  - "SOFT" - program na komputerze
+  
+2. Nazwa którą podczas włączania wypowiada asystent, np. "Google"
+
+3. Możliwości które może powiedzieć użytkownik:
+  a) "youtube"
+  b) "youtuba"
+  c) "jutube"
+  d) ...
+(Ich ilość jest dowolna)
+
+4. Adres strony www lub ścieżka do programu
