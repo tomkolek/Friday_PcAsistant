@@ -7,9 +7,9 @@
 ###### *(Jeżeli polecenie zostało powiedziane poprawnie, a asystent nie zrozumiał wypowiedzi zgłoś proszę ten błąd)*
 
 ## Funkcje:
-* Godzina - *"Która godzina"*
-* Dzień tygodnia oraz dzisiejsza data - *"Jaki jest dzisiaj dzień"*
-* Otwieranie programu/strony www - Otwiera program lub stronę internetową (pszyszłości możliwość dodania własnych stron i programów. aktualnie dostępne tylko Google i YouTube) *"Otwórz Google"*
+* **Godzina** - *"Która godzina"*
+* **Dzień tygodnia oraz dzisiejsza data** - *"Jaki jest dzisiaj dzień"*
+* **Otwieranie programu/strony www** - Otwiera program lub stronę internetową (pszyszłości możliwość dodania własnych stron i programów. aktualnie dostępne tylko Google i YouTube) *"Otwórz Google"*
 * *(Więcej funkcji w trakcie robienia)*
 
 ## Wykorzystane biblioteki:
