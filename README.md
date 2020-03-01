@@ -3,7 +3,7 @@
 
 -----
 
-**Friday** to osobisty asystent, który jest we wczesnej fazie rozwoju. Aby go wywołać Powiedz *"Hej Friday"*, po usłyszeniu dźwięku można wypowiedzieć polecenie. Polecenia nie muszą być wypowiadane kropka w kropkę. Można zamieniać słowa albo powiedzieć różne odmiany słów. Jeżeli polecenie nie będzie istnieć lub zostanie źle zrozumiane asystent odpowie, że *"nie może odpowiedzieć na to pytanie"* i wyłączy się.
+**Friday** to osobisty asystent, który jest we wczesnej fazie rozwoju. Aby go wywołać Powiedz *"Hej Friday"*, po usłyszeniu dźwięku można wypowiedzieć polecenie. Polecenia nie muszą być wypowiadane kropka w kropkę. Można używać innych słów lub je odmieniać. Jeżeli polecenie nie będzie istnieć lub zostanie źle zrozumiane asystent odpowie, że *"nie może odpowiedzieć na to pytanie"* i wyłączy się.
 ###### *(Jeżeli polecenie zostało powiedziane poprawnie, a asystent nie zrozumiał wypowiedzi zgłoś proszę ten błąd)*
 
 ## Funkcje:
@@ -21,13 +21,13 @@
 
 ---
 ### Instalacja:
-* Jeśli nie masz zainstalowanego środowiska Python lub chcesz skożystać ze skompilowanej wersji, wypakuj wszystkie pliki do dowolnego folderu i otwórz plik *"Start.exe"*.
+* Jeśli nie masz zainstalowanego środowiska Python lub chcesz skożystać ze skompilowanej wersji, wypakuj wszystkie pliki do dowolnego folderu i otwórz plik `Start.exe`.
 * Jeśli masz zainstalowane środowisko Python zainstaluj biblioteki zymienione powyżej i uruchom plik `Start.py`
 
 Wszystkie pliki możesz pobrać [stąd.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
 
 ## UWAGA!
-Do funkcjonowanie potrzebne jest połączenie z internetem. Jeżeli asystent nie reaguje po wywołaniu go czy wydaniu polecenia, lub reaguje z dużym opóźnieniem, sprawdź połączenie z internetem. Powolne lącze spowolni generowanie mowy.
+Do funkcjonowanie potrzebne jest połączenie z internetem. Jeżeli asystent nie reaguje po wywołaniu go czy wydaniu polecenia, lub reaguje z dużym opóźnieniem, sprawdź połączenie z internetem. Powolne łącze spowolni generowanie mowy.
 
 ---
 
