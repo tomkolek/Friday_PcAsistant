@@ -8,7 +8,8 @@
 
 ## Funkcje:
 * Godzina - *"Która godzina"*
-* Dzień tygodni oraz dzisiejsza data - *"Jaki jest dzisiaj dzień"*
+* Dzień tygodnia oraz dzisiejsza data - *"Jaki jest dzisiaj dzień"*
+* Otwieranie programu/strony www - Otwiera program lub stronę internetową (pszyszłości możliwość dodania własnych stron i programów. aktualnie dostępne tylko Google i YouTube) *"Otwórz Google"*
 * *(Więcej funkcji w trakcie robienia)*
 
 ## Wykorzystane biblioteki:
