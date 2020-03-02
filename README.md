@@ -3,7 +3,7 @@
 
 -----
 
-**Friday** to osobisty asystent, który jest we wczesnej fazie rozwoju. Po uruchomieniu wyczekuj dzwi3ku uruchomienia. Aby go wywołać Powiedz *"Hej Friday"*, po usłyszeniu dźwięku można wypowiedzieć polecenie. Polecenia nie muszą być wypowiadane kropka w kropkę. Można używać innych słów lub je odmieniać. Jeżeli polecenie nie będzie istnieć lub zostanie źle zrozumiane asystent odpowie, że *"nie może odpowiedzieć na to pytanie"* i wyłączy się.
+**Friday** to osobisty asystent, który jest we wczesnej fazie rozwoju. Po uruchomieniu wyczekuj dźwięku uruchomienia. Aby go wywołać Powiedz *"Hej Friday"*, po usłyszeniu dźwięku można wypowiedzieć polecenie. Polecenia nie muszą być wypowiadane kropka w kropkę. Można używać innych słów lub je odmieniać. Jeżeli polecenie nie będzie istnieć lub zostanie źle zrozumiane asystent odpowie, że *"nie może odpowiedzieć na to pytanie"* i wyłączy się.
 ###### *(Jeżeli polecenie zostało powiedziane poprawnie, a asystent nie zrozumiał wypowiedzi zgłoś proszę ten błąd)*
 
 ## Funkcje:
