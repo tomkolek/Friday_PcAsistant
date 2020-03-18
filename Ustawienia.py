@@ -44,7 +44,7 @@ def getCommand():
 	elif "POMOC" in TEXT[0].upper():
 		help(TEXT)
 
-	elif "dodaj" in TEXT[0].upper():
+	elif "LISTA" in TEXT[0].upper():
 		print("\n   Rodzaj - Nazwa - Sposoby wypowiadania - Ścieżka/Adres strony\n")
 		for a in range(0, len(softList)):
 			print(f"	{a+1}. {softList[a][0]}, {softList[a][1]} - {softList[a][2]}, \"{softList[a][3]}\"")
