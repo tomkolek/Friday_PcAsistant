@@ -28,12 +28,12 @@
 Wszystkie pliki możesz pobrać [stąd.](https://github.com/tomkolek/Friday_PcAsistant/archive/master.zip "Github Friday repository")
 
 ## UWAGA!
-Do funkcjonowanie potrzebne jest połączenie z internetem. Jeżeli asystent nie reaguje po wywołaniu go czy wydaniu polecenia, lub reaguje z dużym opóźnieniem, sprawdź połączenie z internetem. Powolne łącze spowolni generowanie mowy.
+Do funkcjonowania potrzebne jest połączenie z internetem. Jeżeli asystent nie reaguje po wywołaniu go czy wydaniu polecenia, lub reaguje z dużym opóźnieniem, sprawdź połączenie z internetem. Powolne łącze spowolni działanie.
 
 ---
 
 Dostępna jest mapa projektu na stronie [Trello.](https://trello.com/b/NnwU2e8S/friday-osobisty-asystent "Friday roadmap")
 
-Projekt nie jest przystosowany dla systemów MacOS ani Linux. Wykożystane są tu biblioteki niezgodne z tymi systemami. Możliwe, że w trakcie rozwijania projektu zostaną utworzone wersje zgodne z innymi systemami operacyjnymi.
+Projekt nie jest przystosowany dla systemów MacOS ani Linux. Wykożystane tu biblioteki są niezgodne z tymi systemami. Możliwe, że w trakcie rozwijania projektu zostaną utworzone wersje zgodne z innymi systemami operacyjnymi.
 
 Proszę o zgłaszanie błędów jeżeli takie wystąpią.

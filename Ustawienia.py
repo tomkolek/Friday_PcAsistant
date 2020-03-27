@@ -123,7 +123,7 @@ def help(CMD):
 	if len(CMD) == 2:
 		if CMD[1].upper() == "EDYTUJ":
 			print('\n    Polecenia "edytuj" używa się aby edyować listę programów i stron.\n' +
-				  '    (Aby ją wyświetlić użyj polecenia "lista")\n\n' +
+				  '    Użyj polecenia "lista" aby wyświetlić listę programów i stron.\n\n' +
 				  '    Użycie: "edytuj NUMER"\n' +
 				  '    Dalej pozostawiając puste miejsca (klikając enter) ustawienie nie zostanie zmienione.')
 
@@ -131,8 +131,9 @@ def help(CMD):
 			print('\n    Wyświetla listę programów / stron intenetowych\n\n' +
 				  '    Użycie: "lista"')
 
-		elif CMD[1].upper() == "USUŃ":
-			print('\n    Usuwa program/stronę z listy.\n\n' +
+		elif any(x in CMD[1].upper() for x in ["USUŃ", "USUN"]):
+			print('\n    Usuwa program/stronę z listy.\n' +
+				  '    Użyj polecenia "lista" aby wyświetlić listę programów i stron.\n\n' +
 				  '    Użycie: "usuń NUMER"')
 
 		elif CMD[1].upper() == "ZAPISZ":
@@ -140,18 +141,18 @@ def help(CMD):
 				  '    Użycie: "zapisz"')
 		
 		elif CMD[1].upper() == "DODAJ":
-			print('    Dodaje progam/stronę do listy.\n\n' +
+			print('    Dodaje nowy progam/stronę do listy.\n\n' +
 				  '    Użycie: "dodaj"')
 
 		elif CMD[1].upper() == "POMOC":
-			print("\n    Dostępne polecenia:\n        edytuj, lista, pomoc, usuń, zapisz\n\n    Po więcej szczegółów: pomoc POLECENIE")
+			print("\n    Dostępne polecenia:\n        dodaj, edytuj, lista, pomoc, usuń, zapisz\n\n    Po więcej szczegółów: \"pomoc POLECENIE\"")
 
 
 		else:
 			print("Nie ma tekigo polecenia")
 
 	elif len(CMD) == 1:
-		print("\n    Dostępne polecenia:\n        edytuj, lista, pomoc, usuń, zapisz\n\n    Po więcej szczegółów: pomoc POLECENIE")
+		print("\n    Dostępne polecenia:\n        dodaj, edytuj, lista, pomoc, usuń, zapisz\n\n    Po więcej szczegółów: \"pomoc POLECENIE\"")
 
 	else:
 		print("Błędna składnia")
@@ -180,6 +181,18 @@ def add(CMD):
 		print('Błędna składnia. Użyj "pomoc edytuj"')
 
 
-print('Użyj polecenia "pomoc"')
+print('    Ten program ułatwia edycję pliku config.sfg\n' +
+	  '    Plik config.sfg przechowuje informacje dla asystenta o programach i stronach do polecenia "otwórz".\n\n' +
+
+	  '    Program lub strona zapisany jest na liście za pomocą 4 danych:\n' +
+	  '     - rodzaj: program (SOFT) lub strona internetowa (WEB)\n' +
+	  '     - nazwa programu lub strony którą wypowie asystent (np. "jutjuba" zostanie wypowiedziane "Otwieram Jutjuba")' +
+	  '     - możliwe warianty które użytkownik może wypowiedzieć (np. "Google, gogle")' +
+	  '     - adres strony (np. "google.com") lub ścieżka do programu lub pliku (np. "C:\\Programy\\Word.exe")\n\n' +
+
+	  '    Kiedy powiesz do asystenta "Otwórz Google" lub "Otwórz gogle" ten wyszuka "Google" lub "gogle"\n' +
+	  '    w całym spisie programów i stron .\n' +
+
+	  '\n    Użyj polecenia "pomoc"')
 while 1:
 	getCommand()
