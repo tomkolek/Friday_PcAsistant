@@ -1,10 +1,11 @@
 import speech_recognition as sr
-from gtts import gTTS
+#from gtts import gTTS
 import webbrowser as wb
 from datetime import datetime
 import simpleaudio as sa
 import os
 import ctypes
+import requests
 #import time
 
 r = sr.Recognizer()
@@ -27,7 +28,7 @@ class info:
     assistantName = ['HEJ FRIDAY', 'HEY FRIDAY', 'HIFI DAY', 'HEJ FAJNEJ', 'FIVE A DAY', 'HAY DAY', 'PLAY FRIDAY', 'HIGH FAMILY', 'TEJ FAJNEJ', 'NAJFAJNIEJ', 'HEJ HEJ', 'I FAJNEJ']
 
     months = [
-                ['January', 'February', 'March', 'April', 'May', 'Jun', 'July', 'August', 'September', 'Octobel', 'November', 'December'], # po angielsku
+                ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'Octobel', 'November', 'December'], # po angielsku
                 ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'], # po polsku
                 ['Stycznia', 'Lutego', 'Marca', 'Kwietnia', 'Maja', 'Czerwca', 'Lipca', 'Sierpnia', 'Września', 'Października', 'Listopada', 'Grudnia'] # po polsku, odmienione
              ]
@@ -38,7 +39,7 @@ class info:
                ]
 
     dayNumbers = [
-                    ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28',
+                    ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28',
                     '29', '30', '31'],
                     ['pierwszy', 'drugi', 'trzeci', 'czwarty', 'piąty', 'szósty', 'siódmy', 'ósmy', 'dzwiewiąty', 'dziesiąty', 'jedenasty', 'dwunasty', 'trzynasty', 'czternasty',
                     'piętnasty', 'szesnasty', 'siedemnasty', 'osiemnasty', 'dziewiętnsty', 'dwudziesty', 'dwudziesty pierwszy', 'dwudziesty drugi', 'dwudziesty trzeci',
@@ -88,7 +89,9 @@ class do:
     def open(NAME):
         text = NAME.split(" ")
         del text[0]
-        text = " ".join(text)
+        if len(text) > 1:
+            text = " ".join(text)
+
         for a in range(0, len(config.softList)):
             #print(f"a = {a}")
             for b in range(0, len(config.softList[a][2])):
@@ -97,7 +100,7 @@ class do:
                     
                     if config.softList[a][0] == 'WEB':
                         
-                        wb.open(config.softList[a][3])
+                        wb.open_new_tab(config.softList[a][3])
                         do.say(str('Otwieram ' + config.softList[a][1]))
                         
                     elif config.softList[a][0] == 'SOFT':
@@ -105,7 +108,7 @@ class do:
                         os.startfile(config.softList[a][3])
                         do.say(str('Otwieram ' + config.softList[a][1]))
                     else:
-                        print("ZLE ZDEFINIOWANY RODZAJ OPROGRAMOWANIA W PLIKI config.softList.py")
+                        print("ZLE ZDEFINIOWANY RODZAJ OPROGRAMOWANIA W PLIKIU config.softList.py")
                 #else:
                 #    print("b nie")
 
@@ -120,9 +123,9 @@ class do:
     def say(SAY):
         print(SAY)
         print('generowanie')
-        Say=gTTS(text=SAY, lang="pl",)
-        
-        Say.save("res/Sounds/SAIDi.mp3")
+        url = 'https://translate.google.com/translate_tts?ie=UTF-8&q=' + SAY + '&tl=pl&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=23&tk=58620.403981'
+        r = requests.get(url, allow_redirects=True)
+        open('res/Sounds/SAIDi.mp3', 'wb').write(r.content)
         print('wygenerowano')
         
         os.chdir('res/Sounds')
@@ -154,7 +157,7 @@ class do:
 
 class assistant:
     # Wyczekuje wywołania
-    def listenToIgnite():
+    def listenToTrigger():
         while True:
             try:
                 do.captureVoice()
@@ -164,7 +167,7 @@ class assistant:
                 else:
                     pass 
             except:
-                print("błąd")
+                print('błąd')
                 pass
             print("następna próba")
 
@@ -174,7 +177,7 @@ class assistant:
 
 
         # Polecenie "Otwórz"
-        if "Otwórz" in capturedVoice or 'Włącz' in capturedVoice or 'Uruchom' in capturedVoice or 'Pokaż' in capturedVoice or 'Odpal' in capturedVoice:
+        if any(a in capturedVoice for a in ["Otwórz", "Włącz", "Uruchom", "Pokaż", "odpal", "odpalaj"]):
             do.open(capturedVoice)
 
         elif "która godzina" in capturedVoice or "Podaj godzinę" in capturedVoice or "Jaka jest godzina" in capturedVoice:
@@ -183,7 +186,7 @@ class assistant:
         elif "nieważne" == capturedVoice:
             do.playSound("res/Sounds/stop_recognition.wav")
 
-        elif "Który" in capturedVoice or "Jaki" in capturedVoice and "dzień" in capturedVoice or "Co" in capturedVoice and "dzień" in capturedVoice:
+        elif "Który" in capturedVoice or "Jaki" in capturedVoice or "dzień" in capturedVoice or "Co" in capturedVoice or "dzień" in capturedVoice:
             if "dzisiaj" in capturedVoice or "dziś" in capturedVoice:
                 do.date("today")
 
@@ -195,14 +198,16 @@ class assistant:
 
 do.playSound("res/Sounds/Startup.wav")
 
-
-assistant.listenToIgnite()
-
-try:
-    do.captureVoice()
-    print(capturedVoice)
-    assistant.searchForCommand()
-except:
-    do.playSound("res/Sounds/stop_recognition.wav")
-
+while True:
+    assistant.listenToTrigger()
+    try:
+        do.captureVoice()
+        print(capturedVoice)
+        assistant.searchForCommand()
+    except:
+        do.playSound("res/Sounds/stop_recognition.wav")
+	
 do.playSound("res/Sounds/Shutdown.wav")
+
+
+

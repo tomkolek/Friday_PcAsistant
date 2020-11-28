@@ -145,7 +145,18 @@ def help(CMD):
 				  '    Użycie: "dodaj"')
 
 		elif CMD[1].upper() == "POMOC":
-			print("\n    Dostępne polecenia:\n        dodaj, edytuj, lista, pomoc, usuń, zapisz\n\n    Po więcej szczegółów: \"pomoc POLECENIE\"")
+			print('    Ten program służy do edytowania listy programów i stron www które wykorzystujesz do polecenia Otwórz.\n\n' +
+
+	  '    Program lub strona zapisany jest na liście za pomocą 4 wartości:\n' +
+	  '     - RODZAJ: program (SOFT) lub strona internetowa (WEB)\n' +
+	  '     - NAZWA programu lub strony którą wypowie asystent (np. "jutjuba" zostanie wypowiedziane "Otwieram Jutjuba")\n' +
+	  '     - MOŻLIWE SPOSOBY KTÓRE UŻYTKOWNIK MOŻE WYPOWIEDZIEĆ (np. "gugl, gogle")\n' +
+	  '     - ADRES STRONY (np. "google.com") LUB ŚCIEŻKA DO PROGRAMU lub pliku (np. "C:\\Programy\\Word.exe")\n\n' +
+
+	  '    Kiedy powiesz do asystenta "Otwórz Google" lub "Otwórz gogle" ten wyszuka "Google" lub "gogle"\n' +
+	  '    w całym spisie programów i stron .\n' +
+
+	  '\n    Użyj polecenia "pomoc"')
 
 
 		else:
@@ -160,9 +171,12 @@ def help(CMD):
 def add(CMD):
 	if len(CMD) == 1:
 		softList.append([0,0,0,0])
-		getInput = input("\nPodaj rodzaj WEB lub SOFT.\n> ").upper()
-		if getInput != "":
-			softList[len(softList)-1][0] = getInput
+
+		while 1:
+                    getInput = input("\nPodaj rodzaj WEB lub SOFT.\n> ").upper()
+                    if getInput == "WEB" or  getInput == "SOFT":
+                            softList[len(softList)-1][0] = getInput
+                            break
 
 		getInput = input("\nPodaj nazwę, którą ma powiedzieć asystent.\n> ")
 		if getInput != "":
@@ -181,14 +195,13 @@ def add(CMD):
 		print('Błędna składnia. Użyj "pomoc edytuj"')
 
 
-print('    Ten program ułatwia edycję pliku config.sfg\n' +
-	  '    Plik config.sfg przechowuje informacje dla asystenta o programach i stronach do polecenia "otwórz".\n\n' +
+print('    Ten program służy do edytowania listy programów i stron www które wykorzystujesz do polecenia Otwórz.\n\n' +
 
-	  '    Program lub strona zapisany jest na liście za pomocą 4 danych:\n' +
-	  '     - rodzaj: program (SOFT) lub strona internetowa (WEB)\n' +
-	  '     - nazwa programu lub strony którą wypowie asystent (np. "jutjuba" zostanie wypowiedziane "Otwieram Jutjuba")' +
-	  '     - możliwe warianty które użytkownik może wypowiedzieć (np. "Google, gogle")' +
-	  '     - adres strony (np. "google.com") lub ścieżka do programu lub pliku (np. "C:\\Programy\\Word.exe")\n\n' +
+	  '    Program lub strona zapisany jest na liście za pomocą 4 wartości:\n' +
+	  '     - RODZAJ: program (SOFT) lub strona internetowa (WEB)\n' +
+	  '     - NAZWA programu lub strony którą wypowie asystent (np. "jutjuba" zostanie wypowiedziane "Otwieram Jutjuba")\n' +
+	  '     - MOŻLIWE SPOSOBY KTÓRE UŻYTKOWNIK MOŻE WYPOWIEDZIEĆ (np. "gugl, gogle")\n' +
+	  '     - ADRES STRONY (np. "google.com") LUB ŚCIEŻKA DO PROGRAMU lub pliku (np. "C:\\Programy\\Word.exe")\n\n' +
 
 	  '    Kiedy powiesz do asystenta "Otwórz Google" lub "Otwórz gogle" ten wyszuka "Google" lub "gogle"\n' +
 	  '    w całym spisie programów i stron .\n' +
